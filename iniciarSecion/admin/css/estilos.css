@@ -348,6 +348,23 @@ header #button-menu{
 
 
 }
+
+/** boton enlace**/
+div.enlace-pdf{
+ float: right;
+ margin: 10px 25px;
+ padding: 10px 20px;
+}
+div.enlace-pdf a{
+	background-color: #21618c;
+	color: #ffffff;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+div.enlace-pdf a:hover{
+background-color:  #000099;
+}
 /* ============================   Footer ===========================*/
 
 footer{

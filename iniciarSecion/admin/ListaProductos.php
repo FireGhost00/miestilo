@@ -81,11 +81,14 @@ $consulta=mysqli_query($misql,$sql);
         </ul>
     </nav>
 </header>
-	
+
 	<br>
     <br>
     <br>
     <br>
+    <div class="enlace-pdf">
+      <a href="reporteProductos.php" >Imprimir</a>
+    </div>
 	<section id="caja_p">
 <center>
   <h2 style="font-size: 50px">Listado de Productos</h2>
@@ -131,8 +134,8 @@ $consulta=mysqli_query($misql,$sql);
 
 
 	</section>
-	
-	
+
+
 
 	<footer>
 		<p>Derechos reservados &#169; Grupo 14 DPWEB seccion 02 - Mi estilo</p>

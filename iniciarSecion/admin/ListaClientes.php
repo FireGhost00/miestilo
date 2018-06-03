@@ -81,10 +81,14 @@ $consulta=mysqli_query($misql,$sql);
         </ul>
     </nav>
 </header>
+
 <br>
 <br>
 <br>
 <br>
+<div class="enlace-pdf">
+  <a href="reporteCliente.php" >Imprimir</a>
+</div>
 <section id="caja_p">
     <center>
         <h2 style="font-size: 50px">Listado de Clientes</h2>
