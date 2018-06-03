@@ -39,6 +39,7 @@ $pdf->cell(60,10,'Cliente: ',0,0,'L');
 $pdf->cell(20,10,$fila['idcliente'],0,0,'L');
 $pdf->ln(10);
 $pdf->cell(30);
+$pdf->cell(60,10,'Numero Compra: ',0,0,'L');
 $pdf->cell(20,10,$idcompra,0,0,'L');
 $pdf->ln(10);
 $pdf->cell(30);

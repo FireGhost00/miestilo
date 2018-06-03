@@ -9,8 +9,8 @@ if(!isset($_SESSION['vsUsuario'])||($_SESSION['vsTipo']!='admin')){
 ?>
 <?php
 
-require ('conexion.php');$sql=\"SELECT * FROM `productos` INNER JOIN categorias ON productos.idCategoria = categorias.idCategoria where  productos.estado='A'\";
-";
+require ('conexion.php');
+$sql="SELECT * FROM `productos` INNER JOIN categorias ON productos.idCategoria = categorias.idCategoria where  productos.estado='A'";
 //ejecuto la instruccion sql
 $consulta=mysqli_query($misql,$sql);
 ?>
