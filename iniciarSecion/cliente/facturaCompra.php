@@ -79,6 +79,7 @@ $pdf->Setfont('Arial','',12);
 $pdf->cell(110);
 $pdf->cell(20,10,'total: $',0,0,'C');  
 $pdf->setTextcolor(40,164,40);
+$pdf->SetfontSize(20);
 $pdf->cell(30,10,$total,0,0,'C');   
 $pdf->Line(10,245,208,245);
 $pdf->Setfont('Arial','B',16);
