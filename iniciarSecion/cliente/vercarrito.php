@@ -83,7 +83,7 @@ require('conexion.php');
         <?php
         if($carro){
             ?>
-            <table width="720" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-left: 6%;">
+            <table width="720" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-left: 25%;">
                 <tr bgcolor="#333333" class="tit" style="color: white">
                     <td width="105">Producto</td>
                     <td width="207">Precio</td>

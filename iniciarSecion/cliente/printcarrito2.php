@@ -92,7 +92,7 @@ $fila=mysqli_fetch_array($encabezado);
 <br>
 <br>
 <div align="center" >
-    <a href="#" onclick="window.print();" class="noImprimir" style='font-size: 20px;  text-decoration: none; '>Imprimir</a>
+    <a href="facturaCompra.php"  class="noImprimir" style='font-size: 20px;  text-decoration: none; '>Imprimir</a>
     <br>
     <h1>Orden de Compra</h1>
     <table width="600">
