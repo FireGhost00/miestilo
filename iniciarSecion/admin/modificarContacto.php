@@ -125,7 +125,7 @@ mysqli_close($misql);
             </tr>
             <tr>
                 <td>comentario:</td>
-                <td><input type="text" name="txtcomen" value="<?php echo $registro['comentario'];?>" required></td>
+                <td><textarea  name="txtcomen" value="" required><?php echo $registro['comentario'];?></textarea></td>
             </tr>
 
 
@@ -147,12 +147,3 @@ mysqli_close($misql);
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

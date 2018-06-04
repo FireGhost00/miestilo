@@ -57,7 +57,6 @@ $consulta=mysqli_query($misql,$sql);
                 <ul class="submenu">
                     <li class="title-menu"><span class="fa fa-folder-open icon-menu"></span>Listados</li>
                     <li class="go-back">Atras</li>
-
                     <a href="ListaClientes.php"><span class="fa fa-user"></span> Lista de Clientes</a>
                     <a href="ListaProductos.php"><span class="fa fa-list"></span> Lista de Productos</a>
                     <a href="ListaEncuesta.php"><span class="fa fa-list"></span> Lista de Encuesta</a>

@@ -8,7 +8,6 @@ if(!isset($_SESSION['vsUsuario'])||($_SESSION['vsTipo']!='admin')){
 
 ?>
 <?php
-
 require ('conexion.php');
 $sql="SELECT idCotizacion, Nombres, Correo, Telefono, cantidad,Categorias,idProductos, Nombre FROM `cotizacion` INNER JOIN productos on cotizacion.idProducto = productos.idProductos INNER JOIN categorias on productos.idCategoria = categorias.idCategoria where cotizacion.estado='A'";
 //ejecuto la instruccion sql
@@ -81,11 +80,14 @@ $consulta=mysqli_query($misql,$sql);
         </ul>
     </nav>
 </header>
-	
+
 	<br>
     <br>
     <br>
     <br>
+    <div class="enlace-pdf">
+      <a href="reporteCotizacion.php" >Imprimir</a>
+    </div>
 	<section id="caja_p">
 <center>
   <h2 style="font-size: 50px">Listado de Cotizaciones</h2>
@@ -128,15 +130,14 @@ $consulta=mysqli_query($misql,$sql);
                  mysqli_free_result($consulta);
                  mysqli_close($misql);
                  ?>
-
                  </tr>
              </table>
 </center>
 
 
 	</section>
-	
-	
+
+
 
 	<footer>
 		<p>Derechos reservados &#169; Grupo 14 DPWEB seccion 02 - Mi estilo</p>

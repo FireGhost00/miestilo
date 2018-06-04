@@ -8,6 +8,7 @@ if(!isset($_SESSION['vsUsuario'])||($_SESSION['vsTipo']!='admin')){
 
 ?>
 <?php
+$num_rows="";
 require ('conexion.php');
 $id=$_POST['txtbuscar'];
 if(!$id=="")
@@ -15,6 +16,8 @@ if(!$id=="")
 $sql="SELECT compra.id, clientes.nombres, compra.fecha, compra.valorcompra, compra.tipotc,compra.nombretc,compra.bancotc,compra.numerotc,compra.mestc,compra.aniotc   FROM `compra` INNER JOIN clientes on compra.idcliente = clientes.id where compra.estado=0 and clientes.nombres LIKE '%$id%'";
 //ejecuto la instruccion sql
 $consulta=mysqli_query($misql,$sql);
+$num_rows=mysqli_num_rows($consulta);
+
 }
 ?>
 
@@ -60,7 +63,6 @@ $consulta=mysqli_query($misql,$sql);
                 <ul class="submenu">
                     <li class="title-menu"><span class="fa fa-folder-open icon-menu"></span>Listados</li>
                     <li class="go-back">Atras</li>
-
                     <a href="ListaClientes.php"><span class="fa fa-user"></span> Lista de Clientes</a>
                     <a href="ListaProductos.php"><span class="fa fa-list"></span> Lista de Productos</a>
                     <a href="ListaEncuesta.php"><span class="fa fa-list"></span> Lista de Encuesta</a>
@@ -88,15 +90,32 @@ $consulta=mysqli_query($misql,$sql);
 <br>
 <br>
 <br>
+<div class="enlace-pdf">
+  <?php
+
+  if(!$id=="" && !$num_rows==0)
+  {
+    ?>
+  <a href="reporteCompras.php?idc=<?php echo $id?>" >Imprimir</a>';
+  <?php
+  }
+  else {
+    ?>
+    <a href="#" onclick="mensaje();" >Imprimir</a>;
+    <?php
+  }
+   ?>
+
+</div>
  <h2 style="font-size: 50px; text-align: center;">Listado de Compras</h2>
   <div id="modificar">
         <form  method="POST" >
-       
+
               <input type="text" name="txtbuscar" placeholder="Buscar por Clientes" required="">
-        
-             <input type="submit" name="btnBuscar" id="aceptar" value="Buscar" >    
-       
-        
+
+             <input type="submit" name="btnBuscar" id="aceptar"  value="Buscar" >
+
+
         </form>
         </div>
 <section id="caja_p">
@@ -115,13 +134,13 @@ $consulta=mysqli_query($misql,$sql);
                 <td>Banco</td>
                 <td>Numero Tarjeta</td>
                 <td>Mes</td>
-                <td>Años</td>
+                <td>Año</td>
                 <td>Eliminar</td>
                 <td>Modificar</td>
             </tr>
             <tr style="color: white; font-size: larger; " >
                 <?php
-            
+
                 while($registro=mysqli_fetch_array($consulta))
                 {
                     echo "<tr>";
@@ -139,8 +158,10 @@ $consulta=mysqli_query($misql,$sql);
                     echo "<td>"."<a class='mantenimiento' href='modificarCompras.php?codigo=".$registro['id']."'>Modificar</a>"."</td>";
                     echo "</tr>";
                 }
+
+
                 mysqli_free_result($consulta);
-            }
+              }
                 mysqli_close($misql);
                 ?>
 
@@ -159,6 +180,14 @@ $consulta=mysqli_query($misql,$sql);
 <br>
 <br>
 
+
+</script>
+<script type="text/javascript">
+  function mensaje()
+  {
+    alert("Debe de Buscar un cliente...");
+  }
+</script>
 
 <footer>
     <p>Derechos reservados &#169; Grupo 14 DPWEB seccion 02 - Mi estilo</p>
