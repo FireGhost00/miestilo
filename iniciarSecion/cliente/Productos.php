@@ -28,11 +28,11 @@ $consultaN=mysqli_query($misql,$sql3);
 	<meta name="keywords" content="dpweb, DPWEB, actividades dpweb"/>
 	<meta charset="iso-8859-1"/>
 	<meta charset="UTF-8"/>
-	
-	
+
+
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-	
-	
+
+
 	<title>Grupo * - Tienda Mi Estilo</title>
 	<link rel="stylesheet" href="../../cotizacion/css/estilos.css"/>
 	<link rel="stylesheet" href="../../cotizacion/css/font-awesome.css"/>
@@ -80,11 +80,13 @@ $consultaN=mysqli_query($misql,$sql3);
 <section id="seccion">
     <div style="width: 20%; float: right;">
     <a href="vercarrito.php?<?php echo SID ?>" title="Ver el
-contenido del carrito"><img src="img/vercarrito.png" width="40" height="50" border="0"></a>
+contenido del carrito"><img src="img/vercarrito.png" width="100px" height="100px" border="0"></a>
     </div>
     <br>
     <br>
-
+    <br>
+    <br>
+    
 	    <article id="caballeros">
             <h2>Caballeros</h2>
 
@@ -115,9 +117,9 @@ contenido del carrito"><img src="img/vercarrito.png" width="40" height="50" bord
                         $carro[md5($row['idProductos'])]['identificador']!=md5($row['idProductos'])){
                         ?>
                         <a href="agregacar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregar" style=" width: 30%;"> </a><br><?php }else
+                          <img src="img/verificado.png" width="50px" height="50px"  class="agregado"> </a><br><?php }else
                     {?><a href="borracar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregado" style="background: #00a326; width: 30%;"></a><?php } ?>
+                          <img src="img/comprobado.png" width="50px" height="50px"  class="agregado"></a><?php } ?>
 
                 </div>
             <?php } ?>
@@ -155,9 +157,9 @@ contenido del carrito"><img src="img/vercarrito.png" width="40" height="50" bord
                         $carro[md5($row['idProductos'])]['identificador']!=md5($row['idProductos'])){
                         ?>
                         <a href="agregacar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregar" style=" width: 30%;"> </a><br><?php }else
+                            <img src="img/verificado.png" width="50px" height="50px"  class="agregado"> </a><br><?php }else
                     {?><a href="borracar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregado" style="background: #00a326; width: 30%;"></a><?php } ?>
+                            <img src="img/comprobado.png" width="50px" height="50px"  class="agregado"></a><?php } ?>
 
                 </div>
             <?php } ?>
@@ -194,9 +196,9 @@ contenido del carrito"><img src="img/vercarrito.png" width="40" height="50" bord
                         $carro[md5($row['idProductos'])]['identificador']!=md5($row['idProductos'])){
                         ?>
                         <a href="agregacar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregar" style=" width: 30%;"> </a><br><?php }else
+                                <img src="img/verificado.png" width="50px" height="50px"  class="agregado"></a><br><?php }else
                     {?><a href="borracar.php?<?php echo SID ?>&id=<?php echo $row['idProductos']; ?>">
-                            <input type="submit" value="Agregado" style=" background: #00a326; width: 30%;"></a><?php } ?>
+                            <img src="img/comprobado.png" width="50px" height="50px"  class="agregado"> </a><?php } ?>
 
                 </div>
             <?php } ?>
