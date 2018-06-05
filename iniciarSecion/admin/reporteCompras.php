@@ -66,10 +66,10 @@ $pdf->Cell(10);
 
 $pdf->Line(10,245,208,245);
 $pdf->Setfont('Arial','B',10);
-$pdf->SetTextColor(156,55,95);
+$pdf->SetTextColor(0,0,0);
 $posiciony =(245-$pdf->GetY());
 $pdf->ln($posiciony);
-$pdf->Cell(100,10,'Total Contactenos: '.$consulta->num_rows,0,0,'R');
+$pdf->Cell(100,10,'Total Compras: '.$consulta->num_rows,0,0,'R');
 }
 $pdf->output();
 mysqli_free_result($consulta);

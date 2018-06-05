@@ -56,7 +56,7 @@ while($fila2=$consulta->fetch_array())
 }
 $pdf->Line(10,245,208,245);
 $pdf->Setfont('Arial','B',10);
-$pdf->SetTextColor(156,55,95);
+$pdf->SetTextColor(0,0,0);
 $posiciony =(245-$pdf->GetY());
 $pdf->ln($posiciony);
 $pdf->Cell(100,10,'Total Clientes: '.$consulta->num_rows,0,0,'R');

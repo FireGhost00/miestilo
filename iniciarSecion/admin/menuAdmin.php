@@ -36,15 +36,15 @@
             <li><a href="menuAdmin.php"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
             <li class="item-submenu" menu="1">
                 <a href="#"><span class="fa fa-folder icon-menu"></span>Listados</a>
-                <ul class="submenu">
+								<ul class="submenu">
                     <li class="title-menu"><span class="fa fa-folder-open icon-menu"></span>Listados</li>
                     <li class="go-back">Atras</li>
-
                     <a href="ListaClientes.php"><span class="fa fa-user"></span> Lista de Clientes</a>
                     <a href="ListaProductos.php"><span class="fa fa-list"></span> Lista de Productos</a>
                     <a href="ListaEncuesta.php"><span class="fa fa-list"></span> Lista de Encuesta</a>
                     <a href="ListaContacto.php"><span class="fa fa-envelope-open"></span> Lista de  Contacto</a>
                     <a href="ListaCotizaciones.php"><span class="fa fa-list"></span> Lista de Cotizaciones</a>
+                    <a href="ListaCompras.php"><span class="fa fa-list"></span> Lista Compras</a>
                 </ul>
             </li>
 
@@ -66,7 +66,7 @@
 <!--<img src="img/logo.png" alt="logo" width="250" height="150" style="float: right; margin-right: 25px; margin-top: 60px"> !-->
 
 <img class="banner" src="img/banner.jpg" alt="mi estilo">
-	
+
 
 	<footer>
 		<p>Derechos reservados &#169; Grupo 14 DPWEB seccion 02 - Mi estilo</p>
