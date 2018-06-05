@@ -57,29 +57,31 @@ echo $idcompra;
     <span id="button-menu" class="fa fa-bars"> Menu Cliente</span>
 
     <nav class="navegacion">
-        <ul class="menu">
+      <ul class="menu">
 
 
-            <!-- TITULAR -->
-            <li class="title-menu">Bienvenido</li>
-            <!-- TITULAR -->
+          <!-- TITULAR -->
+          <li class="title-menu">Bienvenido</li>
+          <!-- TITULAR -->
 
-            <li><a href="menuCliente.php"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+          <li><a href="menuCliente.php"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
 
-            <li class="item-submenu" menu="1">
-                <a href="perfil.php"><span class="fa fa-user"></span> Perfil</a>
-            </li>
+          <li class="item-submenu" menu="1">
+              <a href="perfil.php"><span class="fa fa-user"></span> Perfil</a>
+          </li>
 
-            <li class="item-submenu" menu="2">
-                <a href="Productos.php"><span class="fa fa-list"></span>Productos</a>
-            </li>
+          <li class="item-submenu" menu="2">
+              <a href="Productos.php"><span class="fa fa-list"></span>Productos</a>
+          </li>
+           <li class="item-submenu" menu="2">
+              <a href="MisCompras.php"><span class="fa fa-list"></span>Mis Compras</a>
+          </li>
+          <li class="item-submenu" menu='5'>
+              <a href="salir.php"><span class="fa fa-sign-out"></span> Cerrar Sesion</a>
+          </li>
 
-            <li class="item-submenu" menu='5'>
-                <a href="salir.php"><span class="fa fa-sign-out"></span> Cerrar Sesion</a>
-            </li>
 
-
-        </ul>
+      </ul>
     </nav>
 </header>
 <br>

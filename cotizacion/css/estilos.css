@@ -278,6 +278,63 @@ header #button-menu{
 
 }
 
+#caja_Compra img {
+    width: 25%;
+    margin-left: 40%;
+
+}
+
+#caja_Compra {
+    width: 50%;
+    height: 100%;
+    margin-top: 2%;
+    margin-left: 12%;
+    display: block;
+}
+
+#caja_Compra input {
+    width: 80%;
+    padding: 2%;
+    margin: 2%;
+    border: none;
+    border-radius: 10px;
+}
+#caja_Compra select {
+
+    padding: 2%;
+    margin: 2%;
+
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+}
+#caja_Compra .anio {
+	padding: 2%;
+	margin: 2%;
+
+	width: 38%;
+	border: none;
+	border-radius: 10px;
+}
+#caja_Compra .mes {
+	padding: 2%;
+	margin: 2%;
+
+	width: 38%;
+	border: none;
+	border-radius: 10px;
+}
+#caja_Compra #comentario {
+    height: 100px;
+
+}
+#caja_Compra #aceptar {
+    width: 20%;
+    cursor: pointer;
+    background: #21618c;
+    color: floralwhite;
+    margin-left: 30%;
+}
 
 
 

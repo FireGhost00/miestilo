@@ -94,36 +94,35 @@ require('conexion.php');
     <span id="button-menu" class="fa fa-bars"> Menu Cliente</span>
 
     <nav class="navegacion">
-        <ul class="menu">
+      <ul class="menu">
 
 
-            <!-- TITULAR -->
-            <li class="title-menu">Bienvenido</li>
-            <!-- TITULAR -->
+          <!-- TITULAR -->
+          <li class="title-menu">Bienvenido</li>
+          <!-- TITULAR -->
 
-            <li><a href="menuCliente.php"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
+          <li><a href="menuCliente.php"><span class="fa fa-home icon-menu"></span>Inicio</a></li>
 
-            <li class="item-submenu" menu="1">
-                <a href="perfil.php"><span class="fa fa-user"></span> Perfil</a>
-            </li>
+          <li class="item-submenu" menu="1">
+              <a href="perfil.php"><span class="fa fa-user"></span> Perfil</a>
+          </li>
 
-            <li class="item-submenu" menu="2">
-                <a href="Productos.php"><span class="fa fa-list"></span>Productos</a>
-            </li>
+          <li class="item-submenu" menu="2">
+              <a href="Productos.php"><span class="fa fa-list"></span>Productos</a>
+          </li>
+           <li class="item-submenu" menu="2">
+              <a href="MisCompras.php"><span class="fa fa-list"></span>Mis Compras</a>
+          </li>
+          <li class="item-submenu" menu='5'>
+              <a href="salir.php"><span class="fa fa-sign-out"></span> Cerrar Sesion</a>
+          </li>
 
-            <li class="item-submenu" menu='5'>
-                <a href="salir.php"><span class="fa fa-sign-out"></span> Cerrar Sesion</a>
-            </li>
 
-
-        </ul>
+      </ul>
     </nav>
 </header>
-<br>
-<br>
-<br>
-<br>
-<div >
+<div id="caja_Compra">
+    <img src="img/logo.png" alt="">
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td width="26%">
@@ -139,8 +138,8 @@ validenviar(this);" >
                                     <table width="242" height="154">
                                         <tr>
                                             <td align="center">
-                                                <font color="#0255A4" size="3"><b> Valor a Pagar </font>
-                                                <font color="#0255A4" size="4">$<?php echo $_SESSION['ValorPagar'];
+                                                <font color="#0255A4" size="5"><b> Valor a Pagar </font>
+                                                <font color="#0255A4" size="5">$<?php echo $_SESSION['ValorPagar'];
                                                     ?></b></font>
                                             </td>
                                         </tr>
@@ -152,7 +151,7 @@ validenviar(this);" >
                                             <span class="no-style-override-12a"><b>Nombre según tarjeta: </b></span>
                                         </td>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
-                                            <input type=text name="nombre" size="40" maxlength="50">
+                                            <input type=text name="nombre" size="40" maxlength="50" placeholder="Ingrese Nombre de la tarjeta" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -160,7 +159,7 @@ validenviar(this);" >
                                             <span class="no-style-override-12a"><b>Banco Emisor : </b></span>
                                         </td>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
-                                            <input type=text name="emisor" size="40" maxlength="35"></td>
+                                            <input type=text name="emisor" size="40" maxlength="35" placeholder="Ingrese le nombre del banco" required></td>
                                     </tr>
                                     <tr>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="26%" align="right">
@@ -168,7 +167,7 @@ validenviar(this);" >
                                         </td>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
                                             <input type="text" name="numero" id="numero" size="20" maxlength="16"
-                                                   autocomplete="off" onblur="ValidarTJ(document.frmAutorizar.numero.value);"></td>
+                                                   autocomplete="off" onblur="ValidarTJ(document.frmAutorizar.numero.value);" placeholder="Ingrese el numero de Tarjeta" required></td>
                                     </tr>
                                     <tr>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="26%" align="right">
@@ -187,7 +186,7 @@ validenviar(this);" >
                                             <span class="no-style-override-12a"><b>Fecha Vencimiento : </b></span>
                                         </td>
                                         <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
-                                            <select size="1" name="mesv">
+                                            <select size="1" name="mesv" class="mes"  required="Selecione mes">
                                                 <option>01</option>
                                                 <option>02</option>
                                                 <option>03</option>
@@ -201,8 +200,8 @@ validenviar(this);" >
                                                 <option>11</option>
                                                 <option>12</option>
                                             </select>/
-                                            <select size="1" name="aniov"
-                                                    onblur="VenceTJ(document.frmAutorizar.mesv.value,document.frmAutorizar.aniov.value);">
+                                            <select size="1" name="aniov"  required="Seleccione año"
+                                                    onblur="VenceTJ(document.frmAutorizar.mesv.value,document.frmAutorizar.aniov.value);" class="anio">
                                                 <option><?php echo date('Y');?></option>
                                                 <?php
                                                 for ($j=1;$j<=10;$j++)
@@ -227,7 +226,7 @@ validenviar(this);" >
                                     <tr>
                                         <td colspan=2 bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
                                             <p class="basic-paragraph basic-paragraph-override-2">
-                                                <span class="no-style-override-12">Valores reflejados no incluyen IVA.</span></p>
+                                                <span class="no-style-override-12" size="5">Valores reflejados no incluyen IVA.</span></p>
                                             <input type="hidden" name="idcliente" value='<?php echo
                                             $_SESSION['tmpUsuario'];?>'>
                                         </td>
@@ -240,13 +239,15 @@ validenviar(this);" >
                                 <table>
                                     <tr>
                                         <td align="right">
-                                            <input type="submit" name="btnComprar" Value="Ejecutar Compra" />
+
                                         </td>
                                         <td>
                                             &nbsp;
                                         </td>
                                     </tr>
                                 </table>
+                                <input type="submit" id="aceptar" name="btnComprar" Value="Comprar" />
+
                             </td>
                         </tr>
                         </tbody>
